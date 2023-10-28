@@ -7,6 +7,11 @@ from flask import jsonify
 from api.v1.views import app_views
 
 
+classes = {"users": "User", "places": "Place", "states": "State",
+           "cities": "City", "amenities": "Amenity",
+           "reviews": "Review"}
+
+
 @app_views.route('/status', strict_slashes=False)
 def returnstuff():
     '''return stuff'''
