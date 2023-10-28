@@ -13,6 +13,11 @@ def teardown_db(error):
     """Closes the storage"""
     storage.close()
 
+@app.errorhandler(404)
+def page_not_found(error):
+    """Returns a JSON-formatted 404 status code response"""
+    return {"error": "Not found"}, 404
+
 if __name__ == "__main__":
     host = environ.get('HBNB_API_HOST')
     port = environ.get('HBNB_API_PORT')
