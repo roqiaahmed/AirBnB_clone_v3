@@ -13,6 +13,15 @@ def returnstuff():
     return jsonify(status='OK')
 
 
+@app_views.route('/stats', methods=['GET'])
+def count():
+    '''retrieves the number of each objects by type'''
+    count_dict = {}
+    for cls in classes:
+        count_dict[cls] = storage.count(classes[cls])
+    return jsonify(count_dict)
+
+
 # @app_views.route('/stats', strict_slashes=False)
 # def stuff():
 #     '''JSON Responses'''
