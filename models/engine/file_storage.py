@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 #!/usr/bin/python3
 """
 Contains the FileStorage class
@@ -95,4 +93,3 @@ class FileStorage:
             count = len(models.storage.all(cls).values())
 
         return count
->>>>>>> 2963b428e8a8472122a03d246157ae20e7b97799
