@@ -12,10 +12,10 @@ classes = {"users": "User", "places": "Place", "states": "State",
            "reviews": "Review"}
 
 
-@app_views.route('/status', strict_slashes=False)
-def returnstuff():
-    '''return stuff'''
-    return jsonify(status='OK')
+@app_views.route('/status', methods=['GET'])
+def status():
+    ''' routes to status page '''
+    return jsonify({'status': 'OK'})
 
 
 @app_views.route('/stats', methods=['GET'])
