@@ -1,8 +1,6 @@
 #!/usr/bin/python3xx
 '''api status'''
-import models
 from models import storage
-from models.base_model import BaseModel
 from flask import jsonify
 from api.v1.views import app_views
 from models.user import User
