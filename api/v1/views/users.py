@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/python3
+
 """ Module for users view """
 from flask import jsonify, abort, request
 from api.v1.views import app_views
