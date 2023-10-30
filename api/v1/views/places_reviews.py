@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+""" Module for places_reviews view """
 from flask import jsonify, abort, request
 from models import storage
 from models.place import Place
